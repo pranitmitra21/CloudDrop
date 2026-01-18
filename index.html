@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudDrop - Secure File Sharing</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Google Fonts: Outfit for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-animate"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-cloud-bolt"></i>
+                <h1>CloudDrop</h1>
+            </div>
+            <p class="tagline">Share files securely & instantly.</p>
+        </header>
+
+        <main class="glass-card">
+
+            <!-- Upload Area -->
+            <div class="drop-zone" id="dropZone">
+                <div class="icon-container">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <p>Drag & Drop your file here</p>
+                <p class="small-text">or <span class="browse-btn" id="browseBtn">browse files</span></p>
+                <input type="file" id="fileInput" hidden>
+            </div>
+
+            <!-- Upload Progress (Hidden by default) -->
+            <div class="upload-status" id="uploadStatus" style="display: none;">
+                <div class="file-info">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span id="fileName">example.pdf</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p id="statusText">Uploading... 0%</p>
+            </div>
+
+            <!-- Result / Download Link (Hidden by default) -->
+            <div class="result-container" id="resultContainer" style="display: none;">
+                <div class="success-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h2>File Uploaded!</h2>
+                <div class="link-box">
+                    <input type="text" id="fileLink" readonly>
+                    <button id="copyBtn" title="Copy Link"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <p class="expiry-text">Link expires in 10 minutes.</p>
+                <button class="reset-btn" id="resetBtn">Upload Another</button>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>CloudDrop • Powered by Supabase</p>
+        </footer>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
