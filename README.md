@@ -1,5 +1,6 @@
 # CloudDrop ⚡
-**Secure, Instant, & Temporary File Sharing.**
+**Secure, Instant, & Temporary File Sharing.**  
+🔴 **Live Demo:** [clouddrop-secure.netlify.app](https://clouddrop-secure.netlify.app/)
 
 CloudDrop is a modern file-sharing application designed for speed and privacy. Upload a file, get a secure link, and share it. The link expires automatically in 10 minutes, and the file effectively self-destructs.
 
