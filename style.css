@@ -11,10 +11,11 @@
     --font-family: 'Outfit', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 body {
@@ -26,7 +27,6 @@ body {
     align-items: center;
     overflow-y: auto;
     /* Allow vertical scrolling */
-    overflow-x: hidden;
     position: relative;
     color: var(--text-color);
     background: #0f172a;
@@ -262,6 +262,8 @@ h2 {
     font-family: inherit;
     width: 100px;
     /* Min width to fix flex issues */
+    min-width: 0;
+    /* Critical for preventing flex items from overflowing */
 }
 
 .link-box button {
